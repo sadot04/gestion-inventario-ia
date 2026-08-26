@@ -1,0 +1,3 @@
+import type { ButtonHTMLAttributes } from 'react'
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> { variante?: 'primario' | 'fantasma' | 'peligro' }
+export function Button({ variante = 'primario', className = '', ...props }: Props) { const estilos = { primario: 'bg-tinta text-white hover:bg-[#293844]', fantasma: 'border border-slate-200 bg-white text-slate-600 hover:bg-slate-50', peligro: 'bg-rose-50 text-rose-600 hover:bg-rose-100' }; return <button className={`inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition ${estilos[variante]} ${className}`} {...props} /> }

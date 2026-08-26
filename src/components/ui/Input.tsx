@@ -1,0 +1,3 @@
+import type { InputHTMLAttributes } from 'react'
+interface Props extends InputHTMLAttributes<HTMLInputElement> { etiqueta?: string }
+export function Input({ etiqueta, className = '', ...props }: Props) { return <label className="block text-sm font-semibold text-slate-600">{etiqueta && <span className="mb-1.5 block">{etiqueta}</span>}<input className={`w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-verde focus:ring-2 focus:ring-verde/15 ${className}`} {...props} /></label> }

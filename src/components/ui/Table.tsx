@@ -1,0 +1,3 @@
+import type { ReactNode } from 'react'
+interface Props { columnas: string[]; children: ReactNode }
+export function Table({ columnas, children }: Props) { return <div className="overflow-x-auto"><table className="w-full text-left text-sm"><thead><tr className="border-b border-slate-100 text-xs uppercase tracking-wider text-slate-400">{columnas.map((columna) => <th className="px-5 py-3 font-bold" key={columna}>{columna}</th>)}</tr></thead><tbody>{children}</tbody></table></div> }
